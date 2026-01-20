@@ -2,7 +2,7 @@
 <sdf version="1.6">
     <world name='default'>
         <physics name="5ms" type="ignored">
-            <max_step_size>0.005</max_step_size>
+            <max_step_size>0.020</max_step_size>
             <real_time_factor>1.0</real_time_factor>
         </physics>
         <plugin
@@ -428,5 +428,43 @@
     <include>
       <uri>model://simple_ground_house</uri>
     </include>
+           
+    <actor name="agent1">
+        <pose>-4.500000 1.860000 0.000000 0 0 0.000000</pose>
+        <skin>
+            <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1</scale>
+        </skin>
+        <animation name="walk">
+            <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+    </actor>
+
+    <!-- <plugin filename="libHuNavSystemPluginIGN.so" name="HuNavSystemPluginIGN">
+        <update_rate>1000</update_rate>
+        <robot_name>CookingBench_01</robot_name>
+        <use_gazebo_obs>true</use_gazebo_obs>
+        <global_frame_to_publish>map</global_frame_to_publish>
+        <use_navgoal_to_start>false</use_navgoal_to_start>
+        <navgoal_topic>goal_pose</navgoal_topic>
+        <ignore_models>
+            <model>link</model>
+            <model>visual</model>
+            <model>collision</model>
+            <model>surface</model>
+            <model>column</model>
+            <model>main_floor</model>
+            <model>sun</model>
+            <model>point_light</model>
+            <model>ground_plane</model>
+            <model>cafe</model>
+            <model>sunVisual</model>
+            <model>sun</model>
+            <model>point_lightVisual</model>
+            <model>point_light</model>
+        </ignore_models>
+    </plugin> -->
     </world>
 </sdf>

@@ -1,0 +1,1749 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<world name="plasys_house">
+		<physics name="5ms" type="ignored">
+					<max_step_size>0.020</max_step_size>
+					<real_time_factor>1.0</real_time_factor>
+		</physics>
+		<plugin
+			filename="gz-sim-physics-system"
+			name="gz::sim::systems::Physics">
+		</plugin>
+		<plugin
+			filename="gz-sim-user-commands-system"
+			name="gz::sim::systems::UserCommands">
+		</plugin>
+		<plugin
+			filename="gz-sim-scene-broadcaster-system"
+			name="gz::sim::systems::SceneBroadcaster">
+		</plugin>
+		<plugin
+			filename="gz-sim-sensors-system"
+			name="gz::sim::systems::Sensors">
+			<render_engine>ogre2</render_engine>
+		</plugin>
+		<plugin
+			filename="gz-sim-imu-system"
+			name="gz::sim::systems::Imu">
+		</plugin>
+		<!-- To add realistic gravity, do: 0.0 0.0 -9.8, otherwise do 0.0 0.0 0.0 -->
+		<gravity>0.0 0.0 -9.8</gravity>
+		<!--Main bedroom-->
+		<model name="Headboards_O84d2b8173e76_lod0_0">
+			<include>
+				<uri>model://Headboards_O84d2b8173e76_lod0</uri>
+				<pose>-7.051275837421418 6.946909320354462 0.0 0.0 0.0 4.71</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Nightstands_O86bb94a2231c_lod0_1">
+			<include>
+				<uri>model://Nightstands_O86bb94a2231c_lod0</uri>
+				<pose>-6.183524486422539 5.799987870454788 0.0 0.0 0.0 4.710000000000001</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Nightstands_O86bb94a2231c_lod0_2">
+			<include>
+				<uri>model://Nightstands_O86bb94a2231c_lod0</uri>
+				<pose>-6.183524486422539 8.099987870454788 0.0 0.0 0.0 4.710000000000001</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="HomeOfficeDesks_O593758bd9853_lod0_3">
+			<include>
+				<uri>model://HomeOfficeDesks_O593758bd9853_lod0</uri>
+				<pose>-8.05 4.000014096498489 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<!-- <model name="HomeOfficeDeskChairs_Oaed1cbd04270_lod0_4">
+			<include>
+				<uri>model://HomeOfficeDeskChairs_Oaed1cbd04270_lod0</uri>
+				<pose>-8.068350660800935 4.34404425919056 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<model name="FloorLamps_Oc1b0ac823eb9_lod0_5">
+			<include>
+				<uri>model://FloorLamps_Oc1b0ac823eb9_lod0</uri>
+				<pose>-7.499942898750305 8.850000178813934 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Bookcases_Of801682c0062_lod0_6">
+			<include>
+				<uri>model://Bookcases_Of801682c0062_lod0</uri>
+				<pose>-9.94999475479126 5.2498297691345215 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Dressers_O3026d3820106_lod0_7">
+			<include>
+				<uri>model://Dressers_O3026d3820106_lod0</uri>
+				<pose>-9.500395596027374 8.800210866332055 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="aws_robomaker_residential_PortraitA_01_plasys">
+			<include>
+				<uri>model://aws_robomaker_residential_PortraitA_01_plasys</uri>
+				<pose>-5.95 6.9 1.5 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<light name='Main_Bedroom_Ceiling_Light' type='point'>
+			<pose frame=''>-8.0 6.3 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.25 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!-- Living room-->
+		<!-- <model name='ChairA_01_001'>
+			<static>true</static>
+			<include>
+				<uri>model://aws_robomaker_residential_ChairA_01</uri>
+			</include>
+			<pose frame=''>-6.5 0.35 0.0 0.0 0.0 3.14</pose>
+		</model>
+		<model name='ChairA_01_002'>
+			<static>true</static>
+			<include>
+				<uri>model://aws_robomaker_residential_ChairA_01</uri>
+			</include>
+			<pose frame=''>-6.5 -0.35 0.0 0.0 0.0 3.14</pose>
+		</model>
+		<model name='ChairA_01_003'>
+			<static>true</static>
+			<include>
+				<uri>model://aws_robomaker_residential_ChairA_01</uri>
+			</include>
+			<pose frame=''>-5.5 0.35 0.0 0.0 0.0 0.0</pose>
+		</model>
+		<model name='ChairA_01_004'>
+			<static>true</static>
+			<include>
+				<uri>model://aws_robomaker_residential_ChairA_01</uri>
+			</include>
+			<pose frame=''>-5.5 -0.35 0.0 0.0 0.0 0.0</pose>
+		</model> -->
+		<!-- <model name='KitchenTable_01_001'>
+			<static>true</static>    
+			<include>
+				<uri>model://aws_robomaker_residential_KitchenTable_01</uri>
+			</include>
+			<pose frame=''>-6.0 0.0 0.0 0 -0 0.0</pose>
+		</model> -->
+		<model name="Sofas_Oa1bfa586a8f8_lod0_8">
+			<include>
+				<uri>model://Sofas_Oa1bfa586a8f8_lod0</uri>
+				<pose>-7.75 -4.308771568536758 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Ottomans_Oe0e3f5670b60_lod0_9">
+			<include>
+				<uri>model://Ottomans_Oe0e3f5670b60_lod0</uri>
+				<pose>-7.75 -3.2500356435775757 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Bookcases_Ocf3b7a3af58b_lod0_11">
+			<include>
+				<uri>model://Bookcases_Ocf3b7a3af58b_lod0</uri>
+				<pose>-3.3498592734336854 -1.6500000000000001 0.0 0.0 0.0 4.71</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="LivingRoomChairs_Obc1361750757_lod0_12">
+			<include>
+				<uri>model://LivingRoomChairs_Obc1361750757_lod0</uri>
+				<pose>-8.797515919804573 2.350000059604645 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="FloorLamps_O3abb34e1a719_lod0_13">
+			<include>
+				<uri>model://FloorLamps_O3abb34e1a719_lod0</uri>
+				<pose>-3.2999999627470973 -3.0197394967079165 0.0 0.0 0.0 4.71</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="SofaTables_Occc3fc60df11_lod0_14">
+			<include>
+				<uri>model://SofaTables_Occc3fc60df11_lod0</uri>
+				<pose>-9.050250428915025 -0.3000001192092896 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="HomeStorageBasketsBinsAndContainers_Oa5676f43a3ee_lod0_15">
+			<include>
+				<uri>model://HomeStorageBasketsBinsAndContainers_Oa5676f43a3ee_lod0</uri>
+				<pose>-7.100246167182923 2.9000000298023227 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<model name="VanityBenches_Od731ef26e49f_lod0_16">
+			<include>
+				<uri>model://VanityBenches_Od731ef26e49f_lod0</uri>
+				<pose>-5.15000011920929 -4.549972283840179 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Cabinets_O34efdbc7cd71_lod0_17">
+			<include>
+				<uri>model://Cabinets_O34efdbc7cd71_lod0</uri>
+				<pose>-3.9000000000000004 -4.558231431245804 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="AudioVideoMediaCabinets_O8c11fbab8c6f_lod0_18">
+			<include>
+				<uri>model://AudioVideoMediaCabinets_O8c11fbab8c6f_lod0</uri>
+				<pose>-9.105899585783481 -1.4998804032802582 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="aws_robomaker_residential_TV_01_plasys">
+			<include>
+				<uri>model://aws_robomaker_residential_TV_01_plasys</uri>
+				<pose>-7.25 3.05 1.5 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<light name='Living_Room_Ceiling_Light_1' type='point'>
+			<pose frame=''>-6.25 2.25 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.25 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<light name='Living_Room_Ceiling_Light_2' type='point'>
+			<pose frame=''>-6.25 -2.5 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.25 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!--Bathroom-->
+		<model name="PedestalSink_303fe81afd0_lod0_19">
+			<include>
+				<uri>model://PedestalSink_303fe81afd0_lod0</uri>
+				<pose>-10.199197497963906 -0.8676211521029473 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Toilet_37fa78cd7dc4_lod0_20">
+			<include>
+				<uri>model://Toilet_37fa78cd7dc4_lod0</uri>
+				<pose>-11.699197497963906 -0.8676211521029473 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="ClothesDryer_bb487c6818dc_lod0_21">
+			<include>
+				<uri>model://ClothesDryer_bb487c6818dc_lod0</uri>
+				<pose>-12.25 3.3435350567102433 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="ShowerAndBath_182f5836455e_lod0_22">
+			<include>
+				<uri>model://ShowerAndBath_182f5836455e_lod0</uri>
+				<pose>-10.053603357076645 2.6685024082660678 0.0 0.0 0.0 4.71</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<light name='Bathroom_Ceiling_Light' type='point'>
+			<pose frame=''>-11.0 1.05 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.25 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!--Kitchen-->
+		<model name="DishWasher_f2d1aeaead9b_lod0_23">
+			<include>
+				<uri>model://DishWasher_f2d1aeaead9b_lod0</uri>
+				<pose>-1.8000070333480835 -1.8073143109679223 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Oven_a94deec47786_lod0_27">
+			<include>
+				<uri>model://Oven_a94deec47786_lod0</uri>
+				<pose>0.8000070333480835 -1.6073143109679223 0.0 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="ServingCarts_Od1716e02c5bd_lod0_28">
+			<include>
+				<uri>model://ServingCarts_Od1716e02c5bd_lod0</uri>
+				<pose>-0.4492406666278839 -1.8000226050615311 0.0 0.0 0.0 3.14</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name='CookingBench_01'>
+			<include>
+				<uri>model://aws_robomaker_residential_CookingBench_01</uri>
+			</include>
+			<pose frame=''>0.5 1.735 0.903610 0.0 0.0 4.71</pose>
+			<static> true </static>
+		</model> 
+		<model name='Rangehood_01_001'>
+			<static>true</static>    
+			<include>
+				<uri>model://aws_robomaker_residential_Rangehood_01</uri>
+			</include>
+			<pose frame=''>0.5 1.8 2.0 0.0 0.0 1.57</pose>
+		</model>
+		<model name='KitchenCabinet_01_001'>
+			<static>true</static>    
+			<include>
+				<uri>model://aws_robomaker_residential_KitchenCabinet_01</uri>
+			</include>
+			<pose frame=''>1.3 0.75 0.0 0.0 0.0 4.71</pose>
+		</model>
+		<model name='Refrigerator_01_001'>
+			<static>true</static>    
+			<include>
+				<uri>model://aws_robomaker_residential_Refrigerator_01</uri>
+			</include>
+			<pose frame=''>-1.3 1.625 0.0 0.0 0.0 0</pose>
+		</model>
+		<light name='Kitchen_Ceiling_Light_1' type='point'>
+			<pose frame=''>0.0 0.0 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.25 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!--Bedroom-->
+		<model name="Headboards_Occ57434fb9f0_lod0_30">
+			<include>
+				<uri>model://Headboards_Occ57434fb9f0_lod0</uri>
+				<pose>1.7022281408309938 3.100017046928406 0.0 0.0 0.0 4.71</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Nightstands_O14c5f5d1199b_lod0_31">
+			<include>
+				<uri>model://Nightstands_O14c5f5d1199b_lod0</uri>
+				<pose>2.560601028800011 4.2501323819160465 0.0 0.0 0.0 4.710000000000001</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="HomeOfficeDesks_Oab58b4fda1f7_lod0_33">
+			<include>
+				<uri>model://HomeOfficeDesks_Oab58b4fda1f7_lod0</uri>
+				<pose>0.30000000000000004 7.200071614980698 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="HomeOfficeDeskChairs_Oaed1cbd04270_lod0_34">
+			<include>
+				<uri>model://HomeOfficeDeskChairs_Oaed1cbd04270_lod0</uri>
+				<pose>0.3183506608009339 6.855955740809441 0.0 0.0 0.0 3.1399999999999997</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Bookcases_Oe43e7e39f537_lod0_35">
+			<include>
+				<uri>model://Bookcases_Oe43e7e39f537_lod0</uri>
+				<pose>2.0 7.3000001341104515 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="FloorLamps_Oa651b7cbe4d7_lod0_36">
+			<include>
+				<uri>model://FloorLamps_Oa651b7cbe4d7_lod0</uri>
+				<pose>2.65 5.239001312851906 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="aws_robomaker_residential_PortraitA_02_plasys">
+			<include>
+				<uri>model://aws_robomaker_residential_PortraitA_02_plasys</uri>
+				<pose>2.875 6.15 1.5 0.0 0.0 1.57</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<light name='Bedroom_Ceiling_Light_1' type='point'>
+			<pose frame=''>1.0 5.0 3.000000 0 -0 0</pose>
+			<diffuse>0.25 0.25 0.15 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!--Hallway-->
+		<model name="Bookcases_Oea630f7d6252_lod0_37">
+			<include>
+				<uri>model://Bookcases_Oea630f7d6252_lod0</uri>
+				<pose>-2.148098075389862 4.657662504911423 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="Bookcases_Oea630f7d6252_lod0_38">
+			<include>
+				<uri>model://Bookcases_Oea630f7d6252_lod0</uri>
+				<pose>-3.6980980753898622 4.657662504911423 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="FloorLamps_Occ4b77538a7e_lod0_39">
+			<include>
+				<uri>model://FloorLamps_Occ4b77538a7e_lod0</uri>
+				<pose>-4.2499778270721436 4.631874124705791 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="FloorLamps_O75326ec60544_lod0_40">
+			<include>
+				<uri>model://FloorLamps_O75326ec60544_lod0</uri>
+				<pose>-2.7759092628955844 4.658160516619683 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model>
+		<light name='Hallway_Ceiling_Light_1' type='point'>
+			<pose frame=''>-3.0 4.0 3.000000 0 -0 0</pose>
+			<diffuse>0.15 0.15 0.15 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>20</range>
+				<constant>0.32</constant>
+				<linear>0.01</linear>
+				<quadratic>0.03</quadratic>
+			</attenuation>
+			<cast_shadows>0</cast_shadows>
+			<direction>0 0 -1</direction>
+		</light>
+		<!--Structure models-->
+		<model name="wall_0">
+			<include>
+				<uri>model://wall_0</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_1">
+			<include>
+				<uri>model://wall_1</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="wall_2">
+			<include>
+				<uri>model://wall_2</uri>
+				<static>true</static>
+			</include>
+		</model> -->
+		<model name="wall_3">
+			<include>
+				<uri>model://wall_3</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_4">
+			<include>
+				<uri>model://wall_4</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="wall_5">
+			<include>
+				<uri>model://wall_5</uri>
+				<static>true</static>
+			</include>
+		</model> -->
+		<model name="wall_6">
+			<include>
+				<uri>model://wall_6</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_7">
+			<include>
+				<uri>model://wall_7</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_8">
+			<include>
+				<uri>model://wall_8</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_9">
+			<include>
+				<uri>model://wall_9</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_10">
+			<include>
+				<uri>model://wall_10</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_11">
+			<include>
+				<uri>model://wall_11</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_12">
+			<include>
+				<uri>model://wall_12</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_13">
+			<include>
+				<uri>model://wall_13</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_14">
+			<include>
+				<uri>model://wall_14</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_15">
+			<include>
+				<uri>model://wall_15</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_16">
+			<include>
+				<uri>model://wall_16</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_17">
+			<include>
+				<uri>model://wall_17</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_18">
+			<include>
+				<uri>model://wall_18</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_19">
+			<include>
+				<uri>model://wall_19</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_20">
+			<include>
+				<uri>model://wall_20</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_21">
+			<include>
+				<uri>model://wall_21</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_22">
+			<include>
+				<uri>model://wall_22</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_23">
+			<include>
+				<uri>model://wall_23</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_24">
+			<include>
+				<uri>model://wall_24</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_25">
+			<include>
+				<uri>model://wall_25</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<!-- <model name="wall_26">
+			<include>
+				<uri>model://wall_26</uri>
+				<static>true</static>
+			</include>
+		</model> -->
+		<model name="wall_27">
+			<include>
+				<uri>model://wall_27</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_28">
+			<include>
+				<uri>model://wall_28</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_29">
+			<include>
+				<uri>model://wall_29</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_30">
+			<include>
+				<uri>model://wall_30</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_31">
+			<include>
+				<uri>model://wall_31</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_32">
+			<include>
+				<uri>model://wall_32</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="wall_33">
+			<include>
+				<uri>model://wall_33</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="doorway_wall_34">
+			<include>
+				<uri>model://doorway_wall_34</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="doorway_wall_35">
+			<include>
+				<uri>model://doorway_wall_35</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="doorway_wall_36">
+			<include>
+				<uri>model://doorway_wall_36</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="doorway_wall_37">
+			<include>
+				<uri>model://doorway_wall_37</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Main_bedroom">
+			<include>
+				<uri>model://floor_Main bedroom</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Living_room">
+			<include>
+				<uri>model://floor_Living room</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Bathroom">
+			<include>
+				<uri>model://floor_Bathroom</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Kitchen">
+			<include>
+				<uri>model://floor_Kitchen</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Bedroom">
+			<include>
+				<uri>model://floor_Bedroom</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<model name="floor_Hallway">
+			<include>
+				<uri>model://floor_Hallway</uri>
+				<static>true</static>
+			</include>
+		</model>
+		<!--Door models-->
+		<!-- <model name="door-Main_bedroom-Hallway">
+			<include>
+				<uri>model://DoorHingedSingleSwingRight_O888a160c5277_lod0</uri>
+				<pose>-5.779999999999999 3.8175 0.0 0.0 0.0 6.281592653589794</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<!-- <model name="door-Kitchen-Living_room">
+			<include>
+				<uri>model://DoorHingedSingleSwingLeft_O8ab66c006110_lod0</uri>
+				<pose>-3.1199999999999997 -0.4325 0.0 0.0 0.0 3.1400000000000006</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<!-- <model name="door-Bathroom-Living_room">
+			<include>
+				<uri>model://DoorHingedSingleSwingLeft_O351f940da952_lod0</uri>
+				<pose>-9.28 1.4825 0.0 0.0 0.0 0.0</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<!-- <model name="door-Hallway-Bedroom">
+			<include>
+				<uri>model://DoorHingedSingleSwingRight_O6596356fe884_lod0</uri>
+				<pose>-0.5800000000000001 3.6175 0.0 0.0 0.0 6.281592653589794</pose>
+				<static>true</static>
+			</include>
+		</model> -->
+		<state world_name="plasys_house">
+			<model name="door-Main_bedroom-Hallway">
+				<link name="DoorHingedSingleSwingRight_O888a160c5277_lod0::door_link">
+					<pose>-5.779999999999999 3.8175 0.0 0 0 3.24</pose>
+				</link>
+			</model>
+			<model name="door-Kitchen-Living_room">
+				<link name="DoorHingedSingleSwingLeft_O8ab66c006110_lod0::door_link">
+					<pose>-3.1199999999999997 -0.4325 0.0 0 0 -0.8</pose>
+				</link>
+			</model>
+			<model name="door-Bathroom-Living_room">
+				<link name="DoorHingedSingleSwingLeft_O351f940da952_lod0::door_link">
+					<pose>-9.28 1.4825 0.0 0 0 1.5707963267948966</pose>
+				</link>
+			</model>
+			<model name="door-Hallway-Bedroom">
+				<link name="DoorHingedSingleSwingRight_O6596356fe884_lod0::door_link">
+					<pose>-0.5800000000000001 3.6175 0.0 0 0 3.3</pose>
+				</link>
+			</model>
+		</state>
+		<!-- <light name='sun' type='directional'>
+			<cast_shadows>1</cast_shadows>
+			<pose frame=''>-5 1 50 0 -0 0</pose>
+			<diffuse>0.8 0.8 0.8 1</diffuse>
+			<specular>0.1 0.1 0.1 1</specular>
+			<attenuation>
+				<range>1000</range>
+				<constant>0.00</constant>
+				<linear>0.00</linear>
+				<quadratic>0.00</quadratic>
+			</attenuation>
+			<direction>1.0 1.0 -1000.0	</direction>
+		</light> -->
+		<gui fullscreen='0'>
+			<camera name='user_camera'>
+				<pose>-19.637680 -8.615614 19.886538 0.0 0.828001 0.584001</pose>
+				<view_controller>orbit</view_controller>
+			</camera>
+		</gui>
+
+		<!-- <actor name="agent0">
+			<pose>0 0 0 0 0 0</pose>
+ 			<skin>
+						<filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1</scale>
+			</skin>
+			<animation name="walk">
+            <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+			</animation>
+			<script>
+				<loop>true</loop>
+				<delay_start>0.0</delay_start>
+				<auto_start>true</auto_start>
+				<trajectory id="0" type="walk" tension="0.6">
+					<waypoint>
+						<time>0.000</time>
+						<pose>-7.9790 0.1379 1.0500 0.0000 0.0000 -0.0097</pose>
+					</waypoint>
+					<waypoint>
+						<time>0.350</time>
+						<pose>-7.6645 0.1477 1.0500 0.0000 0.0000 0.0029</pose>
+					</waypoint>
+					<waypoint>
+						<time>0.630</time>
+						<pose>-7.3808 0.1476 1.0500 0.0000 0.0000 -0.0036</pose>
+					</waypoint>
+					<waypoint>
+						<time>0.910</time>
+						<pose>-7.0933 0.1543 1.0500 0.0000 0.0000 0.0310</pose>
+					</waypoint>
+					<waypoint>
+						<time>1.190</time>
+						<pose>-6.8338 0.1620 1.0500 0.0000 0.0000 0.0358</pose>
+					</waypoint>
+					<waypoint>
+						<time>1.470</time>
+						<pose>-6.5499 0.1436 1.0500 0.0000 0.0000 0.0415</pose>
+					</waypoint>
+					<waypoint>
+						<time>1.750</time>
+						<pose>-6.2642 0.1526 1.0500 0.0000 0.0000 0.0407</pose>
+					</waypoint>
+					<waypoint>
+						<time>2.030</time>
+						<pose>-5.9982 0.1558 1.0500 0.0000 0.0000 0.0405</pose>
+					</waypoint>
+					<waypoint>
+						<time>2.310</time>
+						<pose>-5.7171 0.1429 1.0500 0.0000 0.0000 0.0340</pose>
+					</waypoint>
+					<waypoint>
+						<time>2.590</time>
+						<pose>-5.4148 0.1561 1.0500 0.0000 0.0000 0.0218</pose>
+					</waypoint>
+					<waypoint>
+						<time>2.870</time>
+						<pose>-5.1375 0.1319 1.0500 0.0000 0.0000 0.0105</pose>
+					</waypoint>
+					<waypoint>
+						<time>3.150</time>
+						<pose>-4.8329 0.1141 1.0500 0.0000 0.0000 -0.0082</pose>
+					</waypoint>
+					<waypoint>
+						<time>3.430</time>
+						<pose>-4.5407 0.1021 1.0500 0.0000 0.0000 -0.0105</pose>
+					</waypoint>
+					<waypoint>
+						<time>3.710</time>
+						<pose>-4.2609 0.0753 1.0500 0.0000 0.0000 -0.0704</pose>
+					</waypoint>
+					<waypoint>
+						<time>3.990</time>
+						<pose>-3.9576 0.0010 1.0500 0.0000 0.0000 -0.0955</pose>
+					</waypoint>
+					<waypoint>
+						<time>4.270</time>
+						<pose>-3.6563 -0.0076 1.0500 0.0000 0.0000 -0.0683</pose>
+					</waypoint>
+					<waypoint>
+						<time>4.550</time>
+						<pose>-3.3740 -0.0263 1.0500 0.0000 0.0000 -0.0734</pose>
+					</waypoint>
+					<waypoint>
+						<time>4.830</time>
+						<pose>-3.0929 -0.0502 1.0500 0.0000 0.0000 -0.0814</pose>
+					</waypoint>
+					<waypoint>
+						<time>5.110</time>
+						<pose>-2.8317 -0.0881 1.0500 0.0000 0.0000 -0.1180</pose>
+					</waypoint>
+					<waypoint>
+						<time>5.460</time>
+						<pose>-2.5675 -0.1487 1.0500 0.0000 0.0000 -0.2908</pose>
+					</waypoint>
+					<waypoint>
+						<time>5.810</time>
+						<pose>-2.2898 -0.2336 1.0500 0.0000 0.0000 -0.3469</pose>
+					</waypoint>
+					<waypoint>
+						<time>6.090</time>
+						<pose>-2.0448 -0.3215 1.0500 0.0000 0.0000 -0.3474</pose>
+					</waypoint>
+					<waypoint>
+						<time>6.370</time>
+						<pose>-1.7580 -0.4206 1.0500 0.0000 0.0000 -0.3255</pose>
+					</waypoint>
+					<waypoint>
+						<time>6.650</time>
+						<pose>-1.4767 -0.5152 1.0500 0.0000 0.0000 -0.3374</pose>
+					</waypoint>
+					<waypoint>
+						<time>7.000</time>
+						<pose>-1.1769 -0.6272 1.0500 0.0000 0.0000 -0.4182</pose>
+					</waypoint>
+					<waypoint>
+						<time>7.350</time>
+						<pose>-0.8729 -0.7691 1.0500 0.0000 0.0000 -0.4668</pose>
+					</waypoint>
+					<waypoint>
+						<time>7.630</time>
+						<pose>-0.6043 -0.8859 1.0500 0.0000 0.0000 -0.4244</pose>
+					</waypoint>
+					<waypoint>
+						<time>8.050</time>
+						<pose>-0.3345 -0.9762 1.0500 0.0000 0.0000 -0.1764</pose>
+					</waypoint>
+					<waypoint>
+						<time>8.260</time>
+						<pose>-0.2228 -0.9770 1.0500 0.0000 0.0000 0.0199</pose>
+					</waypoint>
+					<waypoint>
+						<time>8.610</time>
+						<pose>0.0415 -0.9420 1.0500 0.0000 0.0000 0.1715</pose>
+					</waypoint>
+					<waypoint>
+						<time>8.890</time>
+						<pose>0.3083 -0.9233 1.0500 0.0000 0.0000 0.1666</pose>
+					</waypoint>
+					<waypoint>
+						<time>9.240</time>
+						<pose>0.5632 -0.8927 1.0500 0.0000 0.0000 0.0442</pose>
+					</waypoint>
+					<waypoint>
+						<time>9.870</time>
+						<pose>0.7700 -0.8874 1.0500 0.0000 0.0000 0.2872</pose>
+					</waypoint>
+					<waypoint>
+						<time>10.220</time>
+						<pose>0.8230 -0.8780 1.0500 0.0000 0.0000 0.5033</pose>
+					</waypoint>
+					<waypoint>
+						<time>10.920</time>
+						<pose>1.0888 -0.7083 1.0500 0.0000 0.0000 0.6509</pose>
+					</waypoint>
+					<waypoint>
+						<time>11.270</time>
+						<pose>1.1900 -0.6350 1.0500 0.0000 0.0000 0.8726</pose>
+					</waypoint>
+					<waypoint>
+						<time>11.550</time>
+						<pose>1.2148 -0.6230 1.0500 0.0000 0.0000 1.1471</pose>
+					</waypoint>
+					<waypoint>
+						<time>11.760</time>
+						<pose>1.2189 -0.6208 1.0500 0.0000 0.0000 1.3780</pose>
+					</waypoint>
+					<waypoint>
+						<time>12.110</time>
+						<pose>1.2361 -0.5226 1.0500 0.0000 0.0000 1.5701</pose>
+					</waypoint>
+					<waypoint>
+						<time>12.460</time>
+						<pose>1.2494 -0.2968 1.0500 0.0000 0.0000 1.5662</pose>
+					</waypoint>
+					<waypoint>
+						<time>12.740</time>
+						<pose>1.2429 -0.0406 1.0500 0.0000 0.0000 1.5618</pose>
+					</waypoint>
+					<waypoint>
+						<time>13.090</time>
+						<pose>1.2364 0.2086 1.0500 0.0000 0.0000 1.7770</pose>
+					</waypoint>
+					<waypoint>
+						<time>13.370</time>
+						<pose>1.1765 0.3981 1.0500 0.0000 0.0000 2.0004</pose>
+					</waypoint>
+					<waypoint>
+						<time>13.650</time>
+						<pose>1.1052 0.5589 1.0500 0.0000 0.0000 2.2297</pose>
+					</waypoint>
+					<waypoint>
+						<time>13.860</time>
+						<pose>1.0324 0.6405 1.0500 0.0000 0.0000 2.4767</pose>
+					</waypoint>
+					<waypoint>
+						<time>14.140</time>
+						<pose>0.8598 0.7507 1.0500 0.0000 0.0000 2.6944</pose>
+					</waypoint>
+					<waypoint>
+						<time>14.420</time>
+						<pose>0.7254 0.7854 1.0500 0.0000 0.0000 2.9867</pose>
+					</waypoint>
+					<waypoint>
+						<time>14.630</time>
+						<pose>0.6160 0.7778 1.0500 0.0000 0.0000 -3.0739</pose>
+					</waypoint>
+					<waypoint>
+						<time>14.980</time>
+						<pose>0.3323 0.7262 1.0500 0.0000 0.0000 -2.9083</pose>
+					</waypoint>
+					<waypoint>
+						<time>15.190</time>
+						<pose>0.1050 0.6549 1.0500 0.0000 0.0000 -2.9089</pose>
+					</waypoint>
+					<waypoint>
+						<time>15.400</time>
+						<pose>-0.1455 0.5869 1.0500 0.0000 0.0000 -2.9548</pose>
+					</waypoint>
+					<waypoint>
+						<time>15.680</time>
+						<pose>-0.4569 0.5435 1.0500 0.0000 0.0000 -3.0462</pose>
+					</waypoint>
+					<waypoint>
+						<time>15.960</time>
+						<pose>-0.7196 0.5115 1.0500 0.0000 0.0000 -3.0202</pose>
+					</waypoint>
+					<waypoint>
+						<time>16.240</time>
+						<pose>-0.9456 0.4910 1.0500 0.0000 0.0000 -3.0488</pose>
+					</waypoint>
+					<waypoint>
+						<time>16.520</time>
+						<pose>-1.1989 0.4380 1.0500 0.0000 0.0000 -3.0334</pose>
+					</waypoint>
+					<waypoint>
+						<time>16.800</time>
+						<pose>-1.4668 0.3997 1.0500 0.0000 0.0000 -3.0341</pose>
+					</waypoint>
+					<waypoint>
+						<time>17.150</time>
+						<pose>-1.7709 0.3421 1.0500 0.0000 0.0000 -3.0303</pose>
+					</waypoint>
+					<waypoint>
+						<time>17.500</time>
+						<pose>-2.1058 0.2953 1.0500 0.0000 0.0000 -3.0310</pose>
+					</waypoint>
+					<waypoint>
+						<time>17.780</time>
+						<pose>-2.4054 0.2552 1.0500 0.0000 0.0000 -3.0467</pose>
+					</waypoint>
+					<waypoint>
+						<time>18.060</time>
+						<pose>-2.7015 0.2386 1.0500 0.0000 0.0000 -3.0768</pose>
+					</waypoint>
+					<waypoint>
+						<time>18.340</time>
+						<pose>-2.9781 0.1902 1.0500 0.0000 0.0000 -3.1109</pose>
+					</waypoint>
+					<waypoint>
+						<time>18.620</time>
+						<pose>-3.2648 0.1674 1.0500 0.0000 0.0000 -3.1282</pose>
+					</waypoint>
+					<waypoint>
+						<time>18.900</time>
+						<pose>-3.5687 0.1718 1.0500 0.0000 0.0000 3.1253</pose>
+					</waypoint>
+					<waypoint>
+						<time>19.250</time>
+						<pose>-3.9022 0.1831 1.0500 0.0000 0.0000 2.9992</pose>
+					</waypoint>
+					<waypoint>
+						<time>19.530</time>
+						<pose>-4.1521 0.2164 1.0500 0.0000 0.0000 2.9672</pose>
+					</waypoint>
+					<waypoint>
+						<time>19.810</time>
+						<pose>-4.4860 0.2730 1.0500 0.0000 0.0000 2.9142</pose>
+					</waypoint>
+					<waypoint>
+						<time>20.020</time>
+						<pose>-4.7561 0.3002 1.0500 0.0000 0.0000 2.9628</pose>
+					</waypoint>
+					<waypoint>
+						<time>20.230</time>
+						<pose>-5.0288 0.3358 1.0500 0.0000 0.0000 2.9843</pose>
+					</waypoint>
+					<waypoint>
+						<time>20.440</time>
+						<pose>-5.2801 0.3265 1.0500 0.0000 0.0000 3.0115</pose>
+					</waypoint>
+					<waypoint>
+						<time>20.650</time>
+						<pose>-5.5243 0.3152 1.0500 0.0000 0.0000 3.0399</pose>
+					</waypoint>
+					<waypoint>
+						<time>20.860</time>
+						<pose>-5.7819 0.3349 1.0500 0.0000 0.0000 3.0291</pose>
+					</waypoint>
+					<waypoint>
+						<time>21.070</time>
+						<pose>-6.0468 0.3455 1.0500 0.0000 0.0000 3.0414</pose>
+					</waypoint>
+					<waypoint>
+						<time>21.280</time>
+						<pose>-6.3043 0.3399 1.0500 0.0000 0.0000 3.0406</pose>
+					</waypoint>
+					<waypoint>
+						<time>21.490</time>
+						<pose>-6.5400 0.3510 1.0500 0.0000 0.0000 3.0318</pose>
+					</waypoint>
+					<waypoint>
+						<time>21.770</time>
+						<pose>-6.7886 0.3471 1.0500 0.0000 0.0000 3.0500</pose>
+					</waypoint>
+					<waypoint>
+						<time>22.120</time>
+						<pose>-7.0412 0.3763 1.0500 0.0000 0.0000 3.0591</pose>
+					</waypoint>
+					<waypoint>
+						<time>22.540</time>
+						<pose>-7.2948 0.4105 1.0500 0.0000 0.0000 3.1061</pose>
+					</waypoint>
+					<waypoint>
+						<time>22.960</time>
+						<pose>-7.4281 0.4357 1.0500 0.0000 0.0000 -3.0023</pose>
+					</waypoint>
+					<waypoint>
+						<time>23.450</time>
+						<pose>-7.6125 0.4017 1.0500 0.0000 0.0000 -2.7643</pose>
+					</waypoint>
+					<waypoint>
+						<time>23.870</time>
+						<pose>-7.9173 0.2657 1.0500 0.0000 0.0000 -2.7196</pose>
+					</waypoint>
+					<waypoint>
+						<time>24.290</time>
+						<pose>-8.1911 0.1322 1.0500 0.0000 0.0000 -2.5110</pose>
+					</waypoint>
+					<waypoint>
+						<time>24.500</time>
+						<pose>-8.3039 0.0328 1.0500 0.0000 0.0000 -2.2492</pose>
+					</waypoint>
+					<waypoint>
+						<time>24.710</time>
+						<pose>-8.3523 -0.0428 1.0500 0.0000 0.0000 -1.9315</pose>
+					</waypoint>
+					<waypoint>
+						<time>24.920</time>
+						<pose>-8.3864 -0.0568 1.0500 0.0000 0.0000 -1.6249</pose>
+					</waypoint>
+					<waypoint>
+						<time>25.130</time>
+						<pose>-8.4258 -0.1551 1.0500 0.0000 0.0000 -1.3207</pose>
+					</waypoint>
+					<waypoint>
+						<time>25.410</time>
+						<pose>-8.4411 -0.1777 1.0500 0.0000 0.0000 -1.0537</pose>
+					</waypoint>
+					<waypoint>
+						<time>25.690</time>
+						<pose>-8.4442 -0.1606 1.0500 0.0000 0.0000 -0.7922</pose>
+					</waypoint>
+					<waypoint>
+						<time>26.110</time>
+						<pose>-8.4556 -0.1677 1.0500 0.0000 0.0000 -0.5765</pose>
+					</waypoint>
+					<waypoint>
+						<time>26.390</time>
+						<pose>-8.4741 -0.1705 1.0500 0.0000 0.0000 -0.2749</pose>
+					</waypoint>
+					<waypoint>
+						<time>26.600</time>
+						<pose>-8.4616 -0.1702 1.0500 0.0000 0.0000 0.0336</pose>
+					</waypoint>
+					<waypoint>
+						<time>26.810</time>
+						<pose>-8.4659 -0.1695 1.0500 0.0000 0.0000 0.2538</pose>
+					</waypoint>
+
+				</trajectory>
+			</script>
+		</actor> -->
+
+
+
+		<actor name="agent0">
+			<pose>0 0 0 0 0 0</pose>
+ 			<skin>
+						<filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1</scale>
+			</skin>
+			<animation name="walk">
+            <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+			</animation>
+			<script>
+				<loop>true</loop>
+				<delay_start>0.0</delay_start>
+				<auto_start>true</auto_start>
+				<trajectory id="0" type="walk" tension="0.6">
+					<waypoint>
+						<time>0.000</time>
+						<pose>-10.4291 1.2334 1.0500 0.0000 0.0000 -0.0700</pose>
+					</waypoint>
+					<waypoint>
+					<time>0.910</time>
+					<pose>-10.1767 1.2142 1.0500 0.0000 0.0000 -0.0909</pose>
+					</waypoint>
+					<waypoint>
+					<time>1.610</time>
+					<pose>-9.9274 1.1847 1.0500 0.0000 0.0000 -0.1009</pose>
+					</waypoint>
+					<waypoint>
+					<time>2.030</time>
+					<pose>-9.6591 1.1504 1.0500 0.0000 0.0000 -0.1076</pose>
+					</waypoint>
+					<waypoint>
+					<time>2.520</time>
+					<pose>-9.3808 1.1204 1.0500 0.0000 0.0000 -0.0770</pose>
+					</waypoint>
+					<waypoint>
+					<time>2.940</time>
+					<pose>-9.1064 1.0962 1.0500 0.0000 0.0000 -0.0771</pose>
+					</waypoint>
+					<waypoint>
+					<time>3.430</time>
+					<pose>-8.8323 1.0558 1.0500 0.0000 0.0000 -0.1602</pose>
+					</waypoint>
+					<waypoint>
+					<time>3.780</time>
+					<pose>-8.5384 1.0048 1.0500 0.0000 0.0000 -0.1600</pose>
+					</waypoint>
+					<waypoint>
+					<time>4.130</time>
+					<pose>-8.2650 0.9649 1.0500 0.0000 0.0000 -0.1782</pose>
+					</waypoint>
+					<waypoint>
+					<time>4.480</time>
+					<pose>-7.9910 0.9198 1.0500 0.0000 0.0000 -0.2103</pose>
+					</waypoint>
+					<waypoint>
+					<time>4.900</time>
+					<pose>-7.7234 0.8610 1.0500 0.0000 0.0000 -0.2447</pose>
+					</waypoint>
+					<waypoint>
+					<time>5.670</time>
+					<pose>-7.4552 0.7700 1.0500 0.0000 0.0000 -0.4119</pose>
+					</waypoint>
+					<waypoint>
+					<time>6.300</time>
+					<pose>-7.2062 0.6494 1.0500 0.0000 0.0000 -0.3771</pose>
+					</waypoint>
+					<waypoint>
+					<time>7.280</time>
+					<pose>-6.9247 0.5551 1.0500 0.0000 0.0000 -0.2570</pose>
+					</waypoint>
+					<waypoint>
+					<time>7.700</time>
+					<pose>-6.6528 0.4801 1.0500 0.0000 0.0000 -0.2598</pose>
+					</waypoint>
+					<waypoint>
+					<time>8.190</time>
+					<pose>-6.3489 0.4098 1.0500 0.0000 0.0000 -0.1962</pose>
+					</waypoint>
+					<waypoint>
+					<time>8.610</time>
+					<pose>-6.0681 0.3543 1.0500 0.0000 0.0000 -0.1936</pose>
+					</waypoint>
+					<waypoint>
+					<time>9.100</time>
+					<pose>-5.7717 0.2919 1.0500 0.0000 0.0000 -0.1401</pose>
+					</waypoint>
+					<waypoint>
+					<time>9.520</time>
+					<pose>-5.5228 0.2602 1.0500 0.0000 0.0000 0.1016</pose>
+					</waypoint>
+					<waypoint>
+					<time>9.730</time>
+					<pose>-5.4402 0.2592 1.0500 0.0000 0.0000 0.2694</pose>
+					</waypoint>
+					<waypoint>
+					<time>10.570</time>
+					<pose>-5.1684 0.3572 1.0500 0.0000 0.0000 0.2653</pose>
+					</waypoint>
+					<waypoint>
+					<time>11.130</time>
+					<pose>-4.8951 0.4436 1.0500 0.0000 0.0000 0.2697</pose>
+					</waypoint>
+					<waypoint>
+					<time>11.690</time>
+					<pose>-4.7163 0.4724 1.0500 0.0000 0.0000 0.4749</pose>
+					</waypoint>
+					<waypoint>
+					<time>11.970</time>
+					<pose>-4.6861 0.4639 1.0500 0.0000 0.0000 0.7002</pose>
+					</waypoint>
+					<waypoint>
+					<time>12.250</time>
+					<pose>-4.6896 0.4915 1.0500 0.0000 0.0000 0.9176</pose>
+					</waypoint>
+					<waypoint>
+					<time>12.880</time>
+					<pose>-4.5581 0.7691 1.0500 0.0000 0.0000 1.1273</pose>
+					</waypoint>
+					<waypoint>
+					<time>13.300</time>
+					<pose>-4.4444 1.0239 1.0500 0.0000 0.0000 1.1404</pose>
+					</waypoint>
+					<waypoint>
+					<time>13.790</time>
+					<pose>-4.3391 1.2959 1.0500 0.0000 0.0000 1.2303</pose>
+					</waypoint>
+					<waypoint>
+					<time>14.210</time>
+					<pose>-4.2713 1.5590 1.0500 0.0000 0.0000 1.3008</pose>
+					</waypoint>
+					<waypoint>
+					<time>14.700</time>
+					<pose>-4.2147 1.8288 1.0500 0.0000 0.0000 1.4400</pose>
+					</waypoint>
+					<waypoint>
+					<time>15.050</time>
+					<pose>-4.1885 2.1150 1.0500 0.0000 0.0000 1.5204</pose>
+					</waypoint>
+					<waypoint>
+					<time>15.330</time>
+					<pose>-4.1860 2.3668 1.0500 0.0000 0.0000 1.5364</pose>
+					</waypoint>
+					<waypoint>
+					<time>15.610</time>
+					<pose>-4.1862 2.6028 1.0500 0.0000 0.0000 1.5362</pose>
+					</waypoint>
+					<waypoint>
+					<time>15.960</time>
+					<pose>-4.1760 2.8616 1.0500 0.0000 0.0000 1.5339</pose>
+					</waypoint>
+					<waypoint>
+					<time>16.450</time>
+					<pose>-4.1871 3.1097 1.0500 0.0000 0.0000 1.4569</pose>
+					</waypoint>
+					<waypoint>
+					<time>16.730</time>
+					<pose>-4.1757 3.1711 1.0500 0.0000 0.0000 1.2438</pose>
+					</waypoint>
+					<waypoint>
+					<time>17.290</time>
+					<pose>-4.1183 3.3336 1.0500 0.0000 0.0000 1.0501</pose>
+					</waypoint>
+					<waypoint>
+					<time>17.570</time>
+					<pose>-4.1112 3.3558 1.0500 0.0000 0.0000 0.8621</pose>
+					</waypoint>
+					<waypoint>
+					<time>17.850</time>
+					<pose>-4.1096 3.3827 1.0500 0.0000 0.0000 0.6402</pose>
+					</waypoint>
+					<waypoint>
+					<time>18.340</time>
+					<pose>-3.9983 3.4480 1.0500 0.0000 0.0000 0.4420</pose>
+					</waypoint>
+					<waypoint>
+					<time>18.760</time>
+					<pose>-3.7545 3.5668 1.0500 0.0000 0.0000 0.4188</pose>
+					</waypoint>
+					<waypoint>
+					<time>19.250</time>
+					<pose>-3.5031 3.6587 1.0500 0.0000 0.0000 0.3039</pose>
+					</waypoint>
+					<waypoint>
+					<time>19.670</time>
+					<pose>-3.2554 3.7396 1.0500 0.0000 0.0000 0.2635</pose>
+					</waypoint>
+					<waypoint>
+					<time>20.090</time>
+					<pose>-2.9902 3.7975 1.0500 0.0000 0.0000 0.2115</pose>
+					</waypoint>
+					<waypoint>
+					<time>20.580</time>
+					<pose>-2.7106 3.8454 1.0500 0.0000 0.0000 0.1145</pose>
+					</waypoint>
+					<waypoint>
+					<time>21.070</time>
+					<pose>-2.4385 3.8653 1.0500 0.0000 0.0000 0.1348</pose>
+					</waypoint>
+					<waypoint>
+					<time>21.630</time>
+					<pose>-2.1487 3.8954 1.0500 0.0000 0.0000 0.1280</pose>
+					</waypoint>
+					<waypoint>
+					<time>22.050</time>
+					<pose>-1.8923 3.9243 1.0500 0.0000 0.0000 0.1617</pose>
+					</waypoint>
+					<waypoint>
+					<time>22.470</time>
+					<pose>-1.6068 3.9613 1.0500 0.0000 0.0000 0.1668</pose>
+					</waypoint>
+					<waypoint>
+					<time>22.890</time>
+					<pose>-1.3330 4.0007 1.0500 0.0000 0.0000 0.1640</pose>
+					</waypoint>
+					<waypoint>
+					<time>23.380</time>
+					<pose>-1.0487 4.0575 1.0500 0.0000 0.0000 0.2530</pose>
+					</waypoint>
+					<waypoint>
+					<time>23.800</time>
+					<pose>-0.7921 4.1344 1.0500 0.0000 0.0000 0.2982</pose>
+					</waypoint>
+					<waypoint>
+					<time>24.150</time>
+					<pose>-0.6792 4.1780 1.0500 0.0000 0.0000 0.5461</pose>
+					</waypoint>
+					<waypoint>
+					<time>24.570</time>
+					<pose>-0.5724 4.2600 1.0500 0.0000 0.0000 0.7527</pose>
+					</waypoint>
+					<waypoint>
+					<time>25.130</time>
+					<pose>-0.3249 4.4850 1.0500 0.0000 0.0000 0.6939</pose>
+					</waypoint>
+					<waypoint>
+					<time>25.410</time>
+					<pose>-0.2543 4.5405 1.0500 0.0000 0.0000 0.4739</pose>
+					</waypoint>
+					<waypoint>
+					<time>25.900</time>
+					<pose>0.0088 4.6330 1.0500 0.0000 0.0000 0.2907</pose>
+					</waypoint>
+					<waypoint>
+					<time>26.180</time>
+					<pose>0.2450 4.6978 1.0500 0.0000 0.0000 0.2958</pose>
+					</waypoint>
+					<waypoint>
+					<time>26.530</time>
+					<pose>0.4872 4.7655 1.0500 0.0000 0.0000 0.3109</pose>
+					</waypoint>
+					<waypoint>
+					<time>27.020</time>
+					<pose>0.6788 4.8310 1.0500 0.0000 0.0000 0.5336</pose>
+					</waypoint>
+					<waypoint>
+					<time>27.300</time>
+					<pose>0.7160 4.8400 1.0500 0.0000 0.0000 0.8015</pose>
+					</waypoint>
+					<waypoint>
+					<time>27.510</time>
+					<pose>0.7326 4.8351 1.0500 0.0000 0.0000 0.9849</pose>
+					</waypoint>
+					<waypoint>
+					<time>27.720</time>
+					<pose>0.7463 4.8363 1.0500 0.0000 0.0000 1.2328</pose>
+					</waypoint>
+					<waypoint>
+					<time>27.930</time>
+					<pose>0.7431 4.8517 1.0500 0.0000 0.0000 1.4282</pose>
+					</waypoint>
+					<waypoint>
+					<time>28.350</time>
+					<pose>0.7389 4.9807 1.0500 0.0000 0.0000 1.6490</pose>
+					</waypoint>
+					<waypoint>
+					<time>28.910</time>
+					<pose>0.6976 5.2410 1.0500 0.0000 0.0000 1.8308</pose>
+					</waypoint>
+					<waypoint>
+					<time>29.120</time>
+					<pose>0.6751 5.2798 1.0500 0.0000 0.0000 2.0608</pose>
+					</waypoint>
+					<waypoint>
+					<time>29.330</time>
+					<pose>0.6663 5.2880 1.0500 0.0000 0.0000 2.3713</pose>
+					</waypoint>
+					<waypoint>
+					<time>29.540</time>
+					<pose>0.6642 5.2910 1.0500 0.0000 0.0000 2.6732</pose>
+					</waypoint>
+					<waypoint>
+					<time>29.750</time>
+					<pose>0.6537 5.2862 1.0500 0.0000 0.0000 2.9721</pose>
+					</waypoint>
+					<waypoint>
+					<time>29.960</time>
+					<pose>0.6498 5.2944 1.0500 0.0000 0.0000 -3.0001</pose>
+					</waypoint>
+					<waypoint>
+					<time>30.170</time>
+					<pose>0.6525 5.2956 1.0500 0.0000 0.0000 -2.6807</pose>
+					</waypoint>
+					<waypoint>
+					<time>30.380</time>
+					<pose>0.6490 5.3050 1.0500 0.0000 0.0000 -2.3789</pose>
+					</waypoint>
+					<waypoint>
+					<time>30.590</time>
+					<pose>0.6423 5.2945 1.0500 0.0000 0.0000 -2.1282</pose>
+					</waypoint>
+					<waypoint>
+					<time>30.870</time>
+					<pose>0.6111 5.2292 1.0500 0.0000 0.0000 -1.9057</pose>
+					</waypoint>
+					<waypoint>
+					<time>31.430</time>
+					<pose>0.5264 4.9553 1.0500 0.0000 0.0000 -1.8784</pose>
+					</waypoint>
+					<waypoint>
+					<time>31.710</time>
+					<pose>0.4985 4.8836 1.0500 0.0000 0.0000 -2.0872</pose>
+					</waypoint>
+					<waypoint>
+					<time>31.920</time>
+					<pose>0.4966 4.8752 1.0500 0.0000 0.0000 -2.3144</pose>
+					</waypoint>
+					<waypoint>
+					<time>32.130</time>
+					<pose>0.4966 4.8764 1.0500 0.0000 0.0000 -2.5969</pose>
+					</waypoint>
+					<waypoint>
+					<time>32.340</time>
+					<pose>0.4830 4.8769 1.0500 0.0000 0.0000 -2.8762</pose>
+					</waypoint>
+					<waypoint>
+					<time>32.690</time>
+					<pose>0.4625 4.8726 1.0500 0.0000 0.0000 -3.0987</pose>
+					</waypoint>
+					<waypoint>
+					<time>33.320</time>
+					<pose>0.4670 4.8742 1.0500 0.0000 0.0000 -2.8510</pose>
+					</waypoint>
+					<waypoint>
+					<time>33.530</time>
+					<pose>0.4671 4.8712 1.0500 0.0000 0.0000 -2.5925</pose>
+					</waypoint>
+					<waypoint>
+					<time>33.810</time>
+					<pose>0.4350 4.8439 1.0500 0.0000 0.0000 -2.3462</pose>
+					</waypoint>
+					<waypoint>
+					<time>34.440</time>
+					<pose>0.1989 4.5721 1.0500 0.0000 0.0000 -2.2739</pose>
+					</waypoint>
+					<waypoint>
+					<time>34.790</time>
+					<pose>0.0569 4.4169 1.0500 0.0000 0.0000 -2.4809</pose>
+					</waypoint>
+					<waypoint>
+					<time>35.000</time>
+					<pose>0.0314 4.3874 1.0500 0.0000 0.0000 -2.7586</pose>
+					</waypoint>
+					<waypoint>
+					<time>35.140</time>
+					<pose>0.0328 4.3836 1.0500 0.0000 0.0000 -3.0099</pose>
+					</waypoint>
+					<waypoint>
+					<time>35.280</time>
+					<pose>0.0261 4.3813 1.0500 0.0000 0.0000 3.0448</pose>
+					</waypoint>
+					<waypoint>
+					<time>35.560</time>
+					<pose>-0.0441 4.3827 1.0500 0.0000 0.0000 2.8448</pose>
+					</waypoint>
+					<waypoint>
+					<time>36.260</time>
+					<pose>-0.1931 4.4452 1.0500 0.0000 0.0000 3.0758</pose>
+					</waypoint>
+					<waypoint>
+					<time>36.540</time>
+					<pose>-0.2065 4.4585 1.0500 0.0000 0.0000 -2.9783</pose>
+					</waypoint>
+					<waypoint>
+					<time>36.820</time>
+					<pose>-0.2190 4.4681 1.0500 0.0000 0.0000 -2.7684</pose>
+					</waypoint>
+					<waypoint>
+					<time>37.940</time>
+					<pose>-0.4811 4.2839 1.0500 0.0000 0.0000 -2.5596</pose>
+					</waypoint>
+					<waypoint>
+					<time>38.640</time>
+					<pose>-0.7445 4.0885 1.0500 0.0000 0.0000 -2.5425</pose>
+					</waypoint>
+					<waypoint>
+					<time>39.270</time>
+					<pose>-0.9820 3.9328 1.0500 0.0000 0.0000 -2.8156</pose>
+					</waypoint>
+					<waypoint>
+					<time>39.480</time>
+					<pose>-0.9920 3.9266 1.0500 0.0000 0.0000 -3.0444</pose>
+					</waypoint>
+					<waypoint>
+					<time>39.900</time>
+					<pose>-1.0297 3.9379 1.0500 0.0000 0.0000 3.0245</pose>
+					</waypoint>
+					<waypoint>
+					<time>40.390</time>
+					<pose>-1.2756 3.9679 1.0500 0.0000 0.0000 3.0284</pose>
+					</waypoint>
+					<waypoint>
+					<time>40.810</time>
+					<pose>-1.5845 4.0009 1.0500 0.0000 0.0000 3.0342</pose>
+					</waypoint>
+					<waypoint>
+					<time>41.160</time>
+					<pose>-1.8598 4.0268 1.0500 0.0000 0.0000 3.0296</pose>
+					</waypoint>
+					<waypoint>
+					<time>41.580</time>
+					<pose>-2.1189 4.0370 1.0500 0.0000 0.0000 3.1088</pose>
+					</waypoint>
+					<waypoint>
+					<time>42.070</time>
+					<pose>-2.3966 4.0388 1.0500 0.0000 0.0000 -3.0730</pose>
+					</waypoint>
+					<waypoint>
+					<time>43.120</time>
+					<pose>-2.6707 3.9761 1.0500 0.0000 0.0000 -2.9101</pose>
+					</waypoint>
+					<waypoint>
+					<time>43.540</time>
+					<pose>-2.9275 3.9215 1.0500 0.0000 0.0000 -2.9068</pose>
+					</waypoint>
+					<waypoint>
+					<time>43.960</time>
+					<pose>-3.1964 3.8665 1.0500 0.0000 0.0000 -2.9152</pose>
+					</waypoint>
+					<waypoint>
+					<time>44.380</time>
+					<pose>-3.4570 3.8101 1.0500 0.0000 0.0000 -2.9188</pose>
+					</waypoint>
+					<waypoint>
+					<time>44.870</time>
+					<pose>-3.7153 3.7464 1.0500 0.0000 0.0000 -2.8774</pose>
+					</waypoint>
+					<waypoint>
+					<time>45.220</time>
+					<pose>-4.0059 3.6578 1.0500 0.0000 0.0000 -2.8787</pose>
+					</waypoint>
+					<waypoint>
+					<time>45.570</time>
+					<pose>-4.2883 3.5932 1.0500 0.0000 0.0000 -2.8356</pose>
+					</waypoint>
+					<waypoint>
+					<time>45.920</time>
+					<pose>-4.5505 3.5114 1.0500 0.0000 0.0000 -2.8309</pose>
+					</waypoint>
+					<waypoint>
+					<time>46.270</time>
+					<pose>-4.8105 3.4235 1.0500 0.0000 0.0000 -2.8281</pose>
+					</waypoint>
+					<waypoint>
+					<time>46.620</time>
+					<pose>-4.9849 3.3849 1.0500 0.0000 0.0000 -2.6607</pose>
+					</waypoint>
+					<waypoint>
+					<time>47.250</time>
+					<pose>-5.2376 3.2205 1.0500 0.0000 0.0000 -2.5411</pose>
+					</waypoint>
+					<waypoint>
+					<time>48.090</time>
+					<pose>-5.4958 3.0340 1.0500 0.0000 0.0000 -2.5270</pose>
+					</waypoint>
+					<waypoint>
+					<time>49.000</time>
+					<pose>-5.7622 2.8490 1.0500 0.0000 0.0000 -2.5648</pose>
+					</waypoint>
+					<waypoint>
+					<time>49.490</time>
+					<pose>-6.0202 2.6582 1.0500 0.0000 0.0000 -2.5463</pose>
+					</waypoint>
+					<waypoint>
+					<time>49.980</time>
+					<pose>-6.2950 2.4673 1.0500 0.0000 0.0000 -2.5409</pose>
+					</waypoint>
+					<waypoint>
+					<time>50.470</time>
+					<pose>-6.5616 2.2774 1.0500 0.0000 0.0000 -2.5305</pose>
+					</waypoint>
+					<waypoint>
+					<time>50.960</time>
+					<pose>-6.8373 2.0752 1.0500 0.0000 0.0000 -2.5179</pose>
+					</waypoint>
+					<waypoint>
+					<time>51.450</time>
+					<pose>-7.1087 1.8925 1.0500 0.0000 0.0000 -2.5229</pose>
+					</waypoint>
+					<waypoint>
+					<time>51.940</time>
+					<pose>-7.3972 1.7030 1.0500 0.0000 0.0000 -2.5157</pose>
+					</waypoint>
+					<waypoint>
+					<time>52.500</time>
+					<pose>-7.6686 1.5105 1.0500 0.0000 0.0000 -2.5701</pose>
+					</waypoint>
+					<waypoint>
+					<time>52.990</time>
+					<pose>-7.9396 1.3426 1.0500 0.0000 0.0000 -2.5785</pose>
+					</waypoint>
+					<waypoint>
+					<time>53.410</time>
+					<pose>-8.1069 1.2514 1.0500 0.0000 0.0000 -2.8086</pose>
+					</waypoint>
+					<waypoint>
+					<time>53.900</time>
+					<pose>-8.3740 1.1872 1.0500 0.0000 0.0000 -2.9160</pose>
+					</waypoint>
+					<waypoint>
+					<time>54.390</time>
+					<pose>-8.6262 1.1433 1.0500 0.0000 0.0000 -3.0446</pose>
+					</waypoint>
+					<waypoint>
+					<time>54.810</time>
+					<pose>-8.8835 1.1084 1.0500 0.0000 0.0000 -3.0528</pose>
+					</waypoint>
+					<waypoint>
+					<time>55.230</time>
+					<pose>-9.1556 1.0869 1.0500 0.0000 0.0000 -3.0619</pose>
+					</waypoint>
+					<waypoint>
+					<time>55.650</time>
+					<pose>-9.4447 1.0595 1.0500 0.0000 0.0000 -3.0580</pose>
+					</waypoint>
+					<waypoint>
+					<time>56.070</time>
+					<pose>-9.7148 1.0390 1.0500 0.0000 0.0000 -3.0658</pose>
+					</waypoint>
+					<waypoint>
+					<time>56.490</time>
+					<pose>-9.9835 1.0138 1.0500 0.0000 0.0000 -3.0569</pose>
+					</waypoint>
+					<waypoint>
+					<time>56.910</time>
+					<pose>-10.2651 0.9947 1.0500 0.0000 0.0000 -3.0610</pose>
+					</waypoint>
+					<waypoint>
+					<time>57.330</time>
+					<pose>-10.5416 0.9718 1.0500 0.0000 0.0000 -3.0588</pose>
+					</waypoint>
+					<waypoint>
+					<time>57.750</time>
+					<pose>-10.8151 0.9482 1.0500 0.0000 0.0000 -3.0585</pose>
+					</waypoint>
+					<waypoint>
+					<time>87.750</time>
+					<pose>-10.8151 0.9482 1.0500 0.0000 0.0000 -3.0585</pose>
+					</waypoint>
+				</trajectory>
+			</script>
+		</actor>
+
+		<plugin
+      filename="ActorsPosePublisher"
+      name="metrics_manager::ActorsPosePublisher">
+    </plugin>
+	</world>
+</sdf>
